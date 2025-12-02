@@ -1,0 +1,24 @@
+.one{
+    font-size: 50;
+    color: bisque;
+    background-color: black;
+    
+}
+.second{
+    font-size: 50;
+    color: rgb(224, 95, 140,0.9);
+    background-color: rgb(240, 196, 196);
+    
+}
+body{
+    background-color:rgb(245, 215, 179) ;
+    text-align: center;
+}
+div p{
+    background-color: rgb(220, 140, 204);
+    color:antiquewhite;
+}
+.highlight{
+    color:black;
+    background-color: beige;
+}
