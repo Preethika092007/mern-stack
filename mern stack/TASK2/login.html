@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login — Tailwind (Light / Dark)</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+  <style>
+   
+    .bg-fade { transition: background-color 300ms ease, color 300ms ease; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-200 to-pink-200 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-6">
+  <div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+   
+    <div class="hidden md:flex flex-col items-center justify-center px-6">
+      <div class="w-full max-w-md text-center">
+        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=800&q=60" alt="illustration" class="rounded-2xl shadow-lg mb-6 object-cover h-64 w-full"/>
+        <h2 class="text-3xl font-semibold text-gray-800 dark:text-gray-100">Secure. Fast. Beautiful.</h2>
+        <p class="mt-3 text-sm text-gray-600 dark:text-gray-300">Access your dashboard and manage your projects — no backend required for this demo. The layout adapts to phones, tablets and desktops.</p>
+      </div>
+    </div>
+
+   
+    <div class="mx-auto w-full max-w-md">
+      <div class="flex justify-end mb-4">
+        <button id="themeToggle" aria-label="Toggle theme" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 dark:bg-white/5 text-sm shadow-sm hover:scale-105 transition-transform">
+          <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.5a.75.75 0 01.75.75v1.25a.75.75 0 01-1.5 0V4.25A.75.75 0 0110 3.5zM10 13a3 3 0 100-6 3 3 0 000 6zm6.5-3a.75.75 0 01-.75.75h-1.25a.75.75 0 010-1.5H15.75A.75.75 0 0116.5 10zM5.25 9.75a.75.75 0 01-.75.75H3.25a.75.75 0 010-1.5h1.25a.75.75 0 01.75.75zM15.03 5.97a.75.75 0 010 1.06l-.88.88a.75.75 0 11-1.06-1.06l.88-.88a.75.75 0 011.06 0zM6.91 14.09a.75.75 0 010 1.06l-.88.88a.75.75 0 11-1.06-1.06l.88-.88a.75.75 0 011.06 0zM5.97 4.97a.75.75 0 011.06 0l.88.88a.75.75 0 11-1.06 1.06l-.88-.88a.75.75 0 010-1.06zM14.09 13.09a.75.75 0 011.06 0l.88.88a.75.75 0 11-1.06 1.06l-.88-.88a.75.75 0 010-1.06zM10 15.5a.75.75 0 01.75.75v1.25a.75.75 0 11-1.5 0V16.25A.75.75 0 0110 15.5z"/></svg>
+          <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 116.707 2.707a6 6 0 1010.586 10.586z"/></svg>
+          <span id="themeLabel" class="text-xs font-medium">Light</span>
+        </button>
+      </div>
+
+      <div id="card" class="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl p-6 md:p-10 bg-fade transition-colors">
+        <h1 class="text-2xl md:text-3xl font-semibold text-purple-600 dark:text-purple-300 mb-1">Welcome back</h1>
+        <p class="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-6">Sign in to continue to your dashboard.</p>
+
+        <form id="loginForm" class="space-y-4" action="home.html" method="get">
+          <label class="block">
+            <span class="text-xs font-medium text-gray-700 dark:text-gray-300">Username</span>
+            <input id="username" name="username" type="text" required placeholder="Enter Username" class="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400" />
+          </label>
+
+          <label class="block">
+            <span class="text-xs font-medium text-gray-700 dark:text-gray-300">Password</span>
+            <div class="relative">
+              <input id="password" name="password" type="password" required placeholder="Enter Password" class="mt-1 block w-full rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400" />
+              <button type="button" id="pwToggle" class="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-gray-500 dark:text-gray-300">Show</button>
+            </div>
+          </label>
+
+          <button id="submitBtn" type="submit" class="w-full rounded-lg py-2 text-white bg-purple-600 hover:bg-purple-700 transition">Login</button>
+        </form>
+
+        <div id="response" class="mt-6 hidden p-4 rounded-lg bg-green-50 dark:bg-green-900/30 border border-green-100 dark:border-green-800 text-green-800 dark:text-green-200"></div>
+
+        <p class="mt-4 text-xs text-gray-500 dark:text-gray-400">Don't have an account? <a href="#" class="text-purple-600 dark:text-purple-300 underline">Create one</a></p>
+      </div>
+
+      <footer class="mt-6 text-center text-xs text-gray-600 dark:text-gray-300">© <span id="year"></span> Your Company</footer>
+    </div>
+  </div>
+
+  <script>
+    
+    const doc = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLabel = document.getElementById('themeLabel');
+    const iconSun = document.getElementById('iconSun');
+    const iconMoon = document.getElementById('iconMoon');
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        doc.classList.add('dark');
+        themeLabel.textContent = 'Dark';
+        iconSun.classList.add('hidden');
+        iconMoon.classList.remove('hidden');
+      } else {
+        doc.classList.remove('dark');
+        themeLabel.textContent = 'Light';
+        iconSun.classList.remove('hidden');
+        iconMoon.classList.add('hidden');
+      }
+    }
+
+   
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      applyTheme(saved);
+    } else {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(prefersDark ? 'dark' : 'light');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      const next = isDark ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+
+    
+    const pwToggle = document.getElementById('pwToggle');
+    const pwInput = document.getElementById('password');
+    pwToggle.addEventListener('click', () => {
+      if (pwInput.type === 'password') { pwInput.type = 'text'; pwToggle.textContent = 'Hide'; }
+      else { pwInput.type = 'password'; pwToggle.textContent = 'Show'; }
+    });
+
+    
+    if (window.innerWidth < 480) {
+      document.getElementById('username').focus();
+    }
+
+    
+    const loginForm = document.getElementById('loginForm');
+    const responseCard = document.getElementById('response');
+
+    loginForm.addEventListener('submit', (e) => {
+      
+      e.preventDefault();
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value;
+
+      
+      if (user.length < 3 || pass.length < 4) {
+        responseCard.classList.remove('hidden');
+        responseCard.classList.remove('bg-green-50');
+        responseCard.classList.add('bg-red-50');
+        responseCard.textContent = 'Login failed: please enter a valid username (3+ chars) and password (4+ chars).';
+        responseCard.style.borderColor = 'rgba(239, 68, 68, 0.2)';
+        return;
+      }
+
+      
+      responseCard.classList.remove('hidden');
+      responseCard.classList.remove('bg-red-50');
+      responseCard.classList.add('bg-green-50');
+      responseCard.textContent = `Login successful — Welcome, ${user}! Redirecting...`;
+
+      
+      setTimeout(() => {
+       
+        window.location.href = loginForm.getAttribute('action');
+      }, 900);
+    });
+
+  
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    
+    window.addEventListener('resize', () => {
+      
+    });
+  </script>
+</body>
+</html>

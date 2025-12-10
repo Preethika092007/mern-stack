@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bo">
+    <p id="mypara">This is a paragraph</p>
+    <script>
+        const para = document.getElementById
+        ("mypara");
+        para.style.color="orange";
+        para.style.background="aqua";
+        
+
+         const para1 = document.getElementById("bo");
+            para1.style.textAlign="center";
+            para1.style.background="black";     
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">this is a demo class</p>
+    <script>
+        let a= document.getElementById("demo").textContent;
+        console.log(a);
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">this is a demo class</p>
+    <script>
+        let a= document.getElementById("demo").innerText
+        console.log(a);
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="bo">
+    <p class="mypara">This is a paragraph</p>
+    <p class="mypara">This is a paragraph</p>
+    <p class="mypara">This is a paragraph</p>
+    <p class="mypara">This is a paragraph</p>
+    <script>
+        const para = document.getElementsByClassName
+        ("mypara")[0];
+        para.style.color="orange";
+        para.style.background="aqua";
+        para.style.fontSize="50px";
+
+        
+         const para1 = document.getElementById("bo");
+            para1.style.textAlign="center";
+            para1.style.background="black";     
+
+
+    </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hello</p>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText(){
+             document.getElementById("p1").textContent="text changed using innerText";
+
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hello</p>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText(){
+                        /* document.getElementById("p1").textContent="text changed using innerText";
+ */
+            document.getElementById("p1").innerHTML="<b>text changed using innerText</b>";
+        }
+    </script>
+</body>
+   
+
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Hello</p>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText(){
+                        /* document.getElementById("p1").textContent="text changed using innerText";
+ */
+            document.getElementById("p1").innerHTML="<b>text changed using innerText</b>";
+        }
+    </script>
+</body>
+</html>
+
+
+
+

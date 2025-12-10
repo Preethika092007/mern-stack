@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <h2>Contact Form</h2>
+
+    <form>
+
+       
+        <label for="name">Name of the Student:</label><br>
+        <input type="text" id= "name" name="student_name" placeholder="enter your name" required><br><br>
+
+       
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"placeholder="enter your email"
+        required ><br><br>
+
+      
+        <label for ="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="1"   max="100"  required><br><br>
+
+    
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female
+        <br><br>
+
+        
+        <label>Hobbies:</label><br>
+        <input type="checkbox" name="hobby" value="reading"> Reading<br>
+        <input type="checkbox" name="hobby" value="music"> Music<br>
+        <input type="checkbox" name="hobby" value="sports"> Sports<br>
+        <input type="checkbox" name="hobby" value="travel"> Travel
+        <br><br>
+
+        
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" cols="40"placeholder="Type your message here..."></textarea>
+        <br><br>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

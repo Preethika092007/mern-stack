@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+<form>
+
+    <!-- Name -->
+    <label>Name:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <!-- Password -->
+    <label>Password:</label><br>
+    <input type="password" name="password" required><br><br>
+
+    <!-- Phone -->
+    <label>Phone Number:</label><br>
+    <input type="tel" name="phone" maxlength="10" required><br><br>
+
+    <!-- Upload File -->
+    <label>Upload File:</label><br>
+    <input type="file" name="upload"><br><br>
+
+    <!-- Date -->
+    <label>Select Date:</label><br>
+    <input type="date" name="mydate"><br><br>
+
+    <!-- Time -->
+    <label>Select Time:</label><br>
+    <input type="time" name="mytime"><br><br>
+
+    <!-- Date & Time -->
+    <label>Select Date & Time:</label><br>
+    <input type="datetime-local" name="dt"><br><br>
+
+    <!-- Month -->
+    <label>Select Month:</label><br>
+    <input type="month" name="month"><br><br>
+
+    <!-- Week -->
+    <label>Select Week:</label><br>
+    <input type="week" name="week"><br><br>
+
+    <!-- Dropdown -->
+    <label>Select Course:</label><br>
+    <select name="course">
+        <option value="">-- Select Course --</option>
+        <option value="c">C Programming</option>
+        <option value="cpp">C++</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="html">HTML & CSS</option>
+    </select>
+    <br><br>
+
+    <!-- Buttons -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <button type="button" onclick="document.querySelector('form').reset();">Clear</button>
+
+</form>
+<br><br>
+<table border="1" cellpadding ="8" cellspacing="1">
+    <tr>
+        <th colspan="2">Name</th>
+        <th>Age</th>
+        <th>Course</th>
+
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>preethika</td>
+        <td>18</td>
+        <td>ai&ds</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>salomi</td>
+        <td>20</td>
+        <td rowspan="2">cse</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>roveena</td>
+        <td>20</td>
+        
+    </tr>
+</table>
+<br>
+<br>
+
+</body>
+</html>

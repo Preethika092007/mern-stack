@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MERN Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .score-box {
+            background: #f0f8ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>MERN Stack – Basic Quiz</h2>
+    <p id="question"></p>
+
+    <div id="options"></div>
+
+    <button onclick="nextQuestion()">Next</button>
+
+    <div class="score-box" id="scoreBox"></div>
+</div>
+
+<script>
+const quiz = [
+    {
+        q: "What does MERN stand for?",
+        options: ["MongoDB, Express, React, Node", "MySQL, Express, React, Node", "MongoDB, Ember, React, Node"],
+        answer: 0
+    },
+    {
+        q: "Which is the front-end library in MERN?",
+        options: ["React", "Express", "MongoDB"],
+        answer: 0
+    },
+    {
+        q: "MongoDB is a ____ database.",
+        options: ["SQL", "NoSQL", "Graph"],
+        answer: 1
+    }
+];
+
+let index = 0;
+let score = 0;
+let selectedAnswer = -1;
+
+// Load question
+function loadQuestion() {
+    selectedAnswer = -1;
+    document.getElementById("question").innerText = quiz[index].q;
+
+    let optionsHTML = "";
+    quiz[index].options.forEach((opt, i) => {
+        optionsHTML += `
+            <p>
+                <input type="radio" name="option" value="${i}" onclick="selectedAnswer=${i}">
+                ${opt}
+            </p>`;
+    });
+
+    document.getElementById("options").innerHTML = optionsHTML;
+}
+
+// Next button
+function nextQuestion() {
+    if (selectedAnswer === -1) {
+        alert("Please select an answer");
+        return;
+    }
+
+    if (selectedAnswer === quiz[index].answer) {
+        score++;
+    }
+
+    index++;
+
+    if (index < quiz.length) {
+        loadQuestion();
+    } else {
+        showScore();
+    }
+}
+
+function showScore() {
+    document.getElementById("scoreBox").style.display = "block";
+    document.getElementById("scoreBox").innerHTML = 
+        `🎉 Quiz Completed! <br> Your Score: ${score} / ${quiz.length}`;
+
+    document.getElementById("question").style.display = "none";
+    document.getElementById("options").style.display = "none";
+}
+
+// Start quiz
+loadQuestion();
+</script>
+
+</body>
+</html>

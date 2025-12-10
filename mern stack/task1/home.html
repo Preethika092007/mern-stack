@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERN Internship - Home</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding-top: 70px;   
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+        }
+
+        
+        header {
+            background: #d052e9;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+       
+        main {
+            padding: 20px;
+        }
+
+       
+        .box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+
+        
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        button {
+            background: purple;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: rgb(102, 0, 102);
+        }
+
+        
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <header>
+        <h2>MERN Stack Internship</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    
+    <main>
+
+       
+        <section id="home" class="box">
+            <h2>Welcome to MERN Stack Internship</h2>
+            <p>
+                MERN stands for <b>MongoDB, Express.js, React.js, and Node.js</b>.  
+                This internship helps college students learn full-stack web development 
+                with real-time project training.
+            </p>
+
+            <p>
+                In this internship, students learn how to build modern web apps including:
+            </p>
+            <ul>
+                <li>Frontend with React</li>
+                <li>Backend with Node & Express</li>
+                <li>Database using MongoDB</li>
+                <li>Project deployment</li>
+            </ul>
+             <a href="https://www.youtube.com/embed/4EjKroJCpFA?list=PLA3GkZPtsafZydhN4nP0h7hw7PQuLsBv1" target="myframe">
+    MongoDB
+</a><br>
+
+<a href="https://www.youtube.com/embed/CnH3kAXSrmU" target="myframe">
+    Express
+</a><br>
+<a href="https://www.youtube.com/embed/SqcY0GlETPk" target="myframe">
+    React.js
+</a><br>
+<a href="https://www.youtube.com/embed/TlB_eWDSMt4" target="myframe">
+    Node.js
+</a><br><br>
+
+
+<iframe  name="myframe" width="560" height="315"></iframe>
+<h3>MERN Stack Overview</h3>
+    <table border="1" style="width:100%; border-collapse: collapse; text-align:center;">
+        <tr style="background:purple; color:white;">
+            <th>Technology</th>
+            <th>Full Form</th>
+            <th>Used For</th>
+        </tr>
+        <tr>
+            <td>MongoDB</td>
+            <td>Database</td>
+            <td>Storing data as documents</td>
+        </tr>
+        <tr>
+            <td>Express.js</td>
+            <td>Backend Framework</td>
+            <td>Handling APIs & server logic</td>
+        </tr>
+        <tr>
+            <td>React.js</td>
+            <td>Frontend Library</td>
+            <td>Building interactive UI</td>
+        </tr>
+        <tr>
+            <td>Node.js</td>
+            <td>JavaScript Runtime</td>
+            <td>Running JavaScript on the server</td>
+        </tr>
+    </table>
+    <p>Useful MERN Stack Links:</p>
+<ul>
+    <li><a href="https://www.mongodb.com" target="_blank">MongoDB</a></li>
+    <li><a href="https://expressjs.com" target="_blank">Express.js</a></li>
+    <li><a href="https://react.dev" target="_blank">React.js</a></li>
+    <li><a href="https://nodejs.org" target="_blank">Node.js</a></li>
+</ul>
+
+        </section>
+
+        
+        <section id="contact" class="box">
+            <h2>Contact Form</h2>
+            <form>
+                <input type="text" placeholder="Enter Name" required>
+                <input type="email" placeholder="Enter Email" required>
+                <input type="text" placeholder="College Name" required>
+                <input type="text" placeholder="Department" required>
+                <textarea placeholder="Why do you want this internship?" rows="4"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="box">
+            <h2>About This Internship</h2>
+            <p>
+                This MERN Stack Internship is designed for college students to gain 
+                real-world experience in full stack development. Students work on 
+                hands-on projects and build strong technical skills for placements.
+            </p>
+            <!-- MORE TAG SECTION -->
+<details style="margin-top:15px; padding:12px; background:#f0e1ff; border-radius:8px;">
+    <summary style="font-weight:bold; cursor:pointer; color:purple; font-size:16px;">
+        👉 Click here for More Details about MERN Stack
+    </summary>
+
+    <p style="margin-top:10px;">
+        MERN Stack is one of the most powerful combinations for building modern web 
+        applications. It uses JavaScript everywhere — in frontend, backend, and database.
+    </p>
+
+    <ul>
+        <li><b>MongoDB</b> – NoSQL document database</li>
+        <li><b>Express.js</b> – Lightweight backend framework</li>
+        <li><b>React.js</b> – Component-based UI library</li>
+        <li><b>Node.js</b> – Server-side JavaScript runtime</li>
+    </ul>
+
+    <p>
+        These technologies make development faster, easier, and highly scalable.  
+        Many companies use MERN for building apps like:
+    </p>
+
+    <ul>
+        <li>E-commerce Websites</li>
+        <li>Social Media Apps</li>
+        <li>Real-time Chat Applications</li>
+        <li>Admin Dashboards</li>
+        <li>Job Portals</li>
+    </ul>
+</details>
+
+
+
+        </section>
+
+    </main>
+
+    
+    <footer>
+        © 2025 MERN Internship | All Rights Reserved
+    </footer>
+
+</body>
+</html>

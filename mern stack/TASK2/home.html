@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MERN Internship — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+   
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {} }
+    }
+  </script>
+  <style>
+   
+    .bg-fade { transition: background-color .25s ease, color .25s ease; }
+   
+    .iframe-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+    .iframe-wrap iframe { position: absolute; top:0; left:0; width:100%; height:100%; border:0; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 bg-fade">
+ 
+  <header class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-purple-600 to-pink-600 dark:from-gray-800 dark:to-gray-900 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <div class="text-lg font-bold">MERN Stack Internship</div>
+          <nav class="hidden md:flex items-center gap-4 text-sm font-semibold">
+            <a href="#home" class="hover:underline">Home</a>
+            <a href="#contact" class="hover:underline">Contact</a>
+            <a href="#about" class="hover:underline">About Us</a>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button id="themeBtn" aria-label="Toggle theme" class="inline-flex items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-sm hover:bg-white/30 transition">
+            <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3.5a.75.75 0 01.75.75v1.25a.75.75 0 01-1.5 0V4.25A.75.75 0 0110 3.5zM10 13a3 3 0 100-6 3 3 0 000 6zM17 10a.75.75 0 01-.75.75H15a.75.75 0 010-1.5h1.25A.75.75 0 0117 10zM5 10a.75.75 0 01-.75.75H3.25a.75.75 0 010-1.5H4.25A.75.75 0 015 10z"/></svg>
+            <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 116.707 2.707a6 6 0 1010.586 10.586z"/></svg>
+            <span id="themeLabel" class="text-sm">Light</span>
+          </button>
+
+        
+          <button id="mobileBtn" class="md:hidden inline-flex items-center p-2 rounded-md bg-white/10 hover:bg-white/20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+   
+      <div id="mobileMenu" class="md:hidden hidden py-2">
+        <a href="#home" class="block px-2 py-2 rounded hover:bg-white/10">Home</a>
+        <a href="#contact" class="block px-2 py-2 rounded hover:bg-white/10">Contact</a>
+        <a href="#about" class="block px-2 py-2 rounded hover:bg-white/10">About Us</a>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+     
+      <section id="home" class="lg:col-span-2 space-y-6">
+        <article class="rounded-xl bg-white dark:bg-gray-800 shadow p-6">
+          <h1 class="text-2xl md:text-3xl font-bold text-purple-700 dark:text-purple-300">Welcome to MERN Stack Internship</h1>
+          <p class="mt-3 text-sm md:text-base text-gray-600 dark:text-gray-300">MERN stands for <strong>MongoDB, Express.js, React.js, and Node.js</strong>. This internship helps college students learn full-stack web development with real-time project training.</p>
+
+          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-lg border border-gray-100 dark:border-gray-700">
+              <h3 class="font-semibold">Frontend with React</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Component-driven UI and hooks.</p>
+            </div>
+            <div class="p-4 rounded-lg border border-gray-100 dark:border-gray-700">
+              <h3 class="font-semibold">Backend with Node & Express</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">APIs, middleware, authentication.</p>
+            </div>
+            <div class="p-4 rounded-lg border border-gray-100 dark:border-gray-700">
+              <h3 class="font-semibold">Database using MongoDB</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">NoSQL documents, queries, indexing.</p>
+            </div>
+            <div class="p-4 rounded-lg border border-gray-100 dark:border-gray-700">
+              <h3 class="font-semibold">Deployment</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">Hosting, CI/CD, environment setup.</p>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <p class="mb-2">Quick video references (click to load in the player):</p>
+            <div class="flex flex-wrap gap-3">
+              <button data-src="https://www.youtube.com/embed/4EjKroJCpFA?rel=0" class="videoBtn px-3 py-1 rounded bg-purple-600 text-white text-sm">MongoDB</button>
+              <button data-src="https://www.youtube.com/embed/CnH3kAXSrmU?rel=0" class="videoBtn px-3 py-1 rounded bg-purple-600 text-white text-sm">Express</button>
+              <button data-src="https://www.youtube.com/embed/SqcY0GlETPk?rel=0" class="videoBtn px-3 py-1 rounded bg-purple-600 text-white text-sm">React.js</button>
+              <button data-src="https://www.youtube.com/embed/TlB_eWDSMt4?rel=0" class="videoBtn px-3 py-1 rounded bg-purple-600 text-white text-sm">Node.js</button>
+            </div>
+
+            <div class="mt-4 iframe-wrap rounded-lg overflow-hidden shadow">
+              <iframe id="player" src="about:blank" allowfullscreen title="Video player"></iframe>
+            </div>
+          </div>
+
+          <div class="mt-6 overflow-x-auto rounded-lg border border-gray-100 dark:border-gray-700">
+            <table class="min-w-full text-sm text-left table-auto">
+              <thead class="bg-purple-600 text-white">
+                <tr>
+                  <th class="px-4 py-2">Technology</th>
+                  <th class="px-4 py-2">Full Form</th>
+                  <th class="px-4 py-2">Used For</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white dark:bg-gray-800">
+                <tr class="odd:bg-gray-50 dark:odd:bg-gray-900">
+                  <td class="px-4 py-2">MongoDB</td>
+                  <td class="px-4 py-2">Database</td>
+                  <td class="px-4 py-2">Storing data as documents</td>
+                </tr>
+                <tr class="odd:bg-gray-50 dark:odd:bg-gray-900">
+                  <td class="px-4 py-2">Express.js</td>
+                  <td class="px-4 py-2">Backend Framework</td>
+                  <td class="px-4 py-2">Handling APIs & server logic</td>
+                </tr>
+                <tr class="odd:bg-gray-50 dark:odd:bg-gray-900">
+                  <td class="px-4 py-2">React.js</td>
+                  <td class="px-4 py-2">Frontend Library</td>
+                  <td class="px-4 py-2">Building interactive UI</td>
+                </tr>
+                <tr class="odd:bg-gray-50 dark:odd:bg-gray-900">
+                  <td class="px-4 py-2">Node.js</td>
+                  <td class="px-4 py-2">JavaScript Runtime</td>
+                  <td class="px-4 py-2">Running JavaScript on the server</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-4">
+            <p class="text-sm">Useful MERN Stack Links:</p>
+            <ul class="list-disc pl-5 text-sm">
+              <li><a class="text-purple-600 dark:text-purple-300 underline" href="https://www.mongodb.com" target="_blank" rel="noopener">MongoDB</a></li>
+              <li><a class="text-purple-600 dark:text-purple-300 underline" href="https://expressjs.com" target="_blank" rel="noopener">Express.js</a></li>
+              <li><a class="text-purple-600 dark:text-purple-300 underline" href="https://react.dev" target="_blank" rel="noopener">React.js</a></li>
+              <li><a class="text-purple-600 dark:text-purple-300 underline" href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li>
+            </ul>
+          </div>
+        </article>
+
+        
+        <article id="about" class="rounded-xl bg-white dark:bg-gray-800 shadow p-6">
+          <h2 class="text-xl font-semibold">About This Internship</h2>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-300">Designed for college students to gain real-world experience in full stack development. Work on hands-on projects and prepare for placements.</p>
+
+          <details class="mt-4 p-4 rounded bg-purple-50 dark:bg-gray-900/50">
+            <summary class="cursor-pointer font-medium">👉 Click for more details about MERN Stack</summary>
+            <div class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+              <ul class="list-disc pl-5">
+                <li><strong>MongoDB</strong> – NoSQL document database</li>
+                <li><strong>Express.js</strong> – Lightweight backend framework</li>
+                <li><strong>React.js</strong> – Component-based UI library</li>
+                <li><strong>Node.js</strong> – Server-side JavaScript runtime</li>
+              </ul>
+
+              <p class="mt-2">These technologies make development faster, easier, and highly scalable. Common MERN use-cases include e-commerce, social apps, real-time chat, and admin dashboards.</p>
+            </div>
+          </details>
+        </article>
+      </section>
+
+     
+      <aside class="space-y-6">
+        <div class="rounded-xl bg-white dark:bg-gray-800 shadow p-6">
+          <h3 class="font-semibold">Apply / Contact</h3>
+          <form id="contactForm" class="mt-3 space-y-3">
+            <input name="name" type="text" placeholder="Enter Name" required class="w-full rounded border border-gray-200 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" />
+            <input name="email" type="email" placeholder="Enter Email" required class="w-full rounded border border-gray-200 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" />
+            <input name="college" type="text" placeholder="College Name" class="w-full rounded border border-gray-200 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" />
+            <input name="dept" type="text" placeholder="Department" class="w-full rounded border border-gray-200 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100" />
+            <textarea name="why" rows="4" placeholder="Why do you want this internship?" class="w-full rounded border border-gray-200 dark:border-gray-700 px-3 py-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"></textarea>
+            <button type="submit" class="w-full rounded bg-purple-600 text-white py-2">Submit</button>
+          </form>
+
+          <div id="contactResp" class="mt-3 hidden p-3 rounded text-sm"></div>
+        </div>
+
+        <div class="rounded-xl bg-white dark:bg-gray-800 shadow p-6">
+          <h4 class="font-semibold">Quick Links</h4>
+          <ul class="mt-2 text-sm space-y-1">
+            <li><a class="hover:underline text-purple-600 dark:text-purple-300" href="#home">Overview</a></li>
+            <li><a class="hover:underline text-purple-600 dark:text-purple-300" href="#contact">Apply</a></li>
+            <li><a class="hover:underline text-purple-600 dark:text-purple-300" href="#about">Details</a></li>
+          </ul>
+        </div>
+
+        <div class="rounded-xl bg-white dark:bg-gray-800 shadow p-4 text-xs text-gray-500 dark:text-gray-400">
+          © <span id="year"></span> MERN Internship
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+   
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('themeBtn');
+    const themeLabel = document.getElementById('themeLabel');
+    const sunIcon = document.getElementById('sunIcon');
+    const moonIcon = document.getElementById('moonIcon');
+
+    function setTheme(t) {
+      if (t === 'dark') {
+        root.classList.add('dark');
+        themeLabel.textContent = 'Dark';
+        sunIcon.classList.add('hidden');
+        moonIcon.classList.remove('hidden');
+      } else {
+        root.classList.remove('dark');
+        themeLabel.textContent = 'Light';
+        sunIcon.classList.remove('hidden');
+        moonIcon.classList.add('hidden');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) setTheme(savedTheme);
+    else setTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    themeBtn.addEventListener('click', () => {
+      const isDark = root.classList.contains('dark');
+      const next = isDark ? 'light' : 'dark';
+      setTheme(next);
+      localStorage.setItem('theme', next);
+    });
+
+    
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    
+    document.querySelectorAll('.videoBtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.getAttribute('data-src');
+        document.getElementById('player').src = src;
+      });
+    });
+
+    
+    const contactForm = document.getElementById('contactForm');
+    const contactResp = document.getElementById('contactResp');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = contactForm.name.value.trim();
+      if (name.length < 2) {
+        contactResp.classList.remove('hidden');
+        contactResp.classList.remove('text-green-700','bg-green-50');
+        contactResp.classList.add('text-red-700','bg-red-50');
+        contactResp.textContent = 'Please enter a valid name (2+ characters).';
+        return;
+      }
+      contactResp.classList.remove('hidden');
+      contactResp.classList.remove('text-red-700','bg-red-50');
+      contactResp.classList.add('text-green-700','bg-green-50','rounded');
+      contactResp.textContent = `Thank you, ${name}! Your application has been received.`;
+      setTimeout(() => { contactResp.classList.add('hidden'); contactForm.reset(); }, 2500);
+    });
+
+    
+    if (window.innerWidth < 480) contactForm.name.focus();
+
+    
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

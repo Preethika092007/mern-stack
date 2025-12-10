@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.subscribe-btn {
+    background: rgb(152, 119, 231);
+    color: rgb(255, 254, 254);
+    padding: 12px 50px;
+    border:none;
+    border-radius:15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    opacity: 0.6;
+}
+.rectangle {
+    width: 200px;      
+    height: 100px;     
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgb(0, 0, 0);
+    margin-left: 100px;
+    margin-top: 50px;
+}
+h2{
+    position:absolute;
+    top: 40px;
+    left: 200px;
+}
+h3{
+    position: 
+    relative;
+    top: 20px;
+    left:300px
+}
+.fix{
+    position:fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 50px;
+}
+.stic{
+    position: sticky;
+    top: 0;
+    background: yellow;
+}
+.one{
+    background: lightblue;
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 380px;
+    margin-left: 40px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 5;
+    
+}
+.two{
+    background: lightgreen;
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 380px;
+    margin-left: 40px;
+    position: relative;
+    z-index: 8;
+}
+.three{
+    background: lightcoral;
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 380px;
+    margin-left: 40px;}
+.scro {
+  background: #04AA6D;
+  color: white;
+  padding: 15px;
+  width: 90%;
+  height: 100px;
+  overflow: scroll;
+  border: 1px solid #ccc;
+}
+.fixed{
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.au{
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid black;
+  overflow: auto;
+}
+.vis{
+  background-color: coral;
+  width: 200px;
+  height: 65px;
+  border: 1px solid;
+  overflow: visible;
+}
+.containerrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(91, 78, 97, 0.849);
+}
+.containerrow div{
+    background-color: rgb(246, 202, 230);
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+.containercol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(79, 80, 114, 0.656);
+}
+.containercol div{
+    background-color: rgb(225, 244, 182);
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+.gallery-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 10px;
+            scroll-behavior: smooth;
+            white-space: nowrap;
+        }
+
+        
+        .gallery-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .gallery-container img {
+            flex: 0 0 30%;   
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery-container img:hover {
+            transform: scale(1.08);
+        }
+        .img-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        
+        .img-item {
+            flex-basis: 30%;
+            width: 30%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            transition: transform 0.3s;
+        }
+
+        .img-item:hover {
+            transform: scale(1.06);
+        }
+
+</style>
+
+</head>
+<body>
+    <button class="subscribe-btn">Subscribe</button><br>
+    <br>
+    
+    
+
+    <div class="rectangle">
+       <h2>HELLO</h2> 
+       <h3>relative</h3>
+       <p><span  class="fix">Lorem ipsum</span> dolor, sit amet consectetur adipisicing elit. Amet molestias repudiandae unde iure laudantium fuga sapiente, fugit enim, vitae ea quod mollitia <span class="stic">aspernatur</span> deserunt error reiciendis consequuntur rem cumque. Illo eaque minima cupiditate, laboriosam nihil, provident expedita libero asperiores   </p>
+    </div><br><br><br><br><br><br><br><br><br><br>
+    <hr>
+    <div class="scro">
+
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat vitae omnis nihil asperiores, nam tempora sint placeat, earum ratione facere laboriosam beatae maiores nobis iure enim amet dolorem velit, aliquam deserunt tempore facilis itaque ad ullam praesentium. Delectus minima vitae quisquam quas tempora rem laborum recusandae, pariatur quo nobis enim. Animi doloribus consequatur vitae, iure expedita aut aliquid nemo repudiandae quisquam quaerat optio reiciendis! Ut veritatis voluptatem velit temporibus dolores porro fugiat earum adipisci, mollitia perferendis ipsam fuga unde accusamus? Earum, pariatur ad eveniet velit ab impedit facilis blanditiis ex architecto hic itaque suscipit iure? Rem cupiditate expedita accusamus beatae?
+    </div><br><br>
+    <div class="fixed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur autem pariatur quaerat eveniet adipisci praesentium hic? Enim aliquam perspiciatis nulla atque? Ea quia non, vel rerum earum, quod odio illum eos ratione iusto aliquid aut. Dolore eligendi earum modi, saepe, beatae voluptates quidem quasi dolores illum hic rerum culpa recusandae unde aperiam inventore voluptatem mollitia nihil tenetur esse optio? Laboriosam qui cupiditate impedit eveniet architecto quod facilis, ad accusantium provident, enim soluta, iure perferendis. Accusamus iste, voluptatem repellat perferendis quis sed quae. Voluptate voluptates ipsum sequi? Impedit aut ad minus, illo eius temporibus, architecto, tempora dolor repellat quos tenetur quam?</div>
+    <br><br>
+    <div class="au">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis officiis commodi voluptatibus quaerat enim accusantium voluptatum, quasi eius! Odit rem iste, ipsam ipsa nemo maiores. Error reprehenderit, repudiandae sit voluptate expedita recusandae tempora odit eum, deserunt rem tenetur, suscipit omnis at incidunt. Quas explicabo ad quo illo autem quae hic incidunt similique, cum et magni maxime atque? Eligendi vitae, neque explicabo ipsum dolor suscipit eveniet corporis, aliquam cum, animi quisquam ex eos a accusamus tempore laudantium? Necessitatibus vero labore perspiciatis. Mollitia obcaecati natus, fugit voluptas facere praesentium quis, quibusdam voluptate ullam quam, architecto impedit magni possimus accusamus laudantium blanditiis! Quam.</div>
+    <br><br>
+    <div class="vis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque maxime laudantium at, rerum nostrum laboriosam libero illum facere nulla eos provident excepturi repudiandae cum neque tempore fugiat? Architecto incidunt e </div>
+    
+    <br><br>
+    <div class="one">class1</div>
+    <div class="two">class2</div>
+    <div class="three">class3</div>
+<br><br>
+<div class="containerrow">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item2</div>
+</div>
+<br><br>
+<div class="containercol">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item2</div>
+</div><br><br>
+   <h1>Flexbox Image Gallery</h1>
+
+    <div class="gallery-container">
+        <img src="rose.jpeg" alt="Image 1">
+        <img src="rose.jpeg" alt="Image 2">
+        <img src="rose.jpeg" alt="Image 3">
+        <img src="rose.jpeg" alt="Image 4">
+        <img src="rose.jpeg" alt="Image 5">
+        <img src="rose.jpeg" alt="Image 6">
+    </div>
+ 
+    <br><br>
+    <h1> image gallery</h1>
+
+     <div class="img-box">
+        <img class="img-item" src="https://images.unsplash.com/photo-1495837174058-628aafc7d610?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHMlMjBncm91cHxlbnwwfHwwfHx8MA%3D%3D" alt="Image 1">
+        <img class="img-item" src="https://i.pinimg.com/736x/92/62/7b/92627b0dde135866ecb0149a6c7743e8.jpg" alt="Image 2">
+        <img class="img-item" src="https://www.thortful.com/blog/wp-content/uploads/2024/05/Types-of-friends-in-a-friendship-group.jpg" alt="Image 3">
+        <img class="img-item" src="https://unigreet.com/wp-content/uploads/2021/01/3-friends-group-icon-pic.jpg" alt="Image 4">
+        <img class="img-item" src="https://www.springer-ld.org/wp-content/uploads/2019/12/blog_16.9.30.jpg" alt="Image 5">
+        <img class="img-item" src="https://img.freepik.com/premium-photo/funny-friends-classmates_917664-19033.jpg" alt="Image 6">
+    </div><br>
+    <br>
+</body>
+</html>

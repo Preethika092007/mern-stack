@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <h1>Simple JavaScript Program</h1>
+
+    <p>1. What does HTML stand for?</p>
+    <input type="radio" name="q1" value="correct">Hyper Text Markup Language<br>
+    <input type="radio" name="q1" value="wrong">Hyper Text Markdown Language<br>
+    
+    <p>Which one is a programming language?</p>
+    <input type="radio" name="q2" value="wrong">HTML<br>
+    <input type="radio" name="q2" value="wrong">CSS<br>
+    <input type="radio" name="q2" value="correct">JavaScript<br>
+    
+    <p>Which one is best for SEO?</p>
+    <input type="radio" name="q3" value="correct">HTML<br>
+    <input type="radio" name="q3" value="wrong">CSS<br>
+    <input type="radio" name="q3" value="wrong">JavaScript<br>
+
+    <br>
+    <button onclick="checkAnswers()">Submit</button>
+
+    <h2 id="result"></h2>
+
+<script>
+function checkAnswers() {
+
+    let score = 0;
+
+    let q1 = document.querySelector('input[name="q1"]:checked');
+    let q2 = document.querySelector('input[name="q2"]:checked');
+    let q3 = document.querySelector('input[name="q3"]:checked');
+
+    if (q1 && q1.value === "correct") score++;
+    if (q2 && q2.value === "correct") score++;
+    if (q3 && q3.value === "correct") score++;
+
+    // Display result
+    if (score === 3) {
+        document.getElementById("result").textContent = "You are a genius! Score: " + score;
+    } 
+    else if (score === 2) {
+        document.getElementById("result").textContent = "You are good! Score: " + score;
+    } 
+    else if (score === 1) {
+        document.getElementById("result").textContent = "You are average! Score: " + score;
+    } 
+    else {
+        document.getElementById("result").textContent = "You are bad! Score: " + score;
+    }
+}
+</script>
+
+</body>
+</html>
